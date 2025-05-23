@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HeaderSecction(){
     return(
-        <header className="flex items-center justify-between px-30 py-4 border">
+        <header className="flex items-center justify-between px-30 py-4 sticky top-0 z-30 w-screen">
             <h1 className="text-2xl font-bold">Placer and Delirios</h1>
             <nav>
                 <Link to="/" className="navigateItem">Inicio</Link>

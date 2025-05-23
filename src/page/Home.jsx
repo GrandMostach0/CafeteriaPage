@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import CoffeBanner from "../assets/images/CoffeBanner.png"
 import { Link } from "react-router-dom";
 import CardPresentacion from "../components/Cards/CardPresentacion";
+import CardProducto from "../components/Cards/CardProducto";
 
 const Home = () =>{
+    const listaMenu = ['caffe', 'postres', 'bebidas', 'productos', 'mercancias']
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+
     return(
         <>
             <section className="border-red-800 min-h-[80vh] flex items-center justify-center">
@@ -29,8 +34,31 @@ const Home = () =>{
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit
                     </p>
                 </div>
+                <div className="border-none bg-amber-950 max-w-[30%] rounded-xl py-4 m-auto mt-5 flex items-center justify-center ">
+                    {listaMenu.map((lista, index) => (
+                        <p
+                            key={index}
+                            className={`mx-2 py-1 px-4 border-none cursor-pointer ${
+                            index === selectedIndex
+                                ? "text-amber-950 bg-yellow-600 rounded-lg font-bold" // Estilo seleccionado
+                                : "text-yellow-600" // Estilo normal
+                            }`}
+                            onClick={() => setSelectedIndex(index)}
+                        >
+                        {lista}
+                      </p>
+                    ))}
+                </div>
 
-                <div></div>
+                <div className="my-10 px-4 py-4 grid grid-cols-3 m-auto w-[50%] gap-10">
+                    <CardProducto />
+                    <CardProducto />
+                    <CardProducto />
+                    <CardProducto />
+                    <CardProducto />
+                    <CardProducto />
+                </div>
+
             </section>
 
         </>

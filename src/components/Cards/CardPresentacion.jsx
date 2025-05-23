@@ -3,7 +3,7 @@ import Coffe from "../../assets/images/CoffeBanner.png"
 
 const CardPresentacion = () => {
     return(
-        <div className="bg-amber-950 border-green-200 w-[500px] flex items-center py-2 px-2 rounded-2xl mx-5">
+        <div className="bg-amber-950 border-green-200 w-[500px] flex items-center py-2 px-2 rounded-2xl mx-5 m-auto">
             <img src={Coffe} alt="caffe" className="w-[50%] rounded-xl"/>
 
             <div className="px-5 py-5 text-center text-white">

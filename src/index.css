@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+@layer components {
+    .navigateItem {
+        @apply mr-2 px-4 py-2 text-sm;
+    }
+}

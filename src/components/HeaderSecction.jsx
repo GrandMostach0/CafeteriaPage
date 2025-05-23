@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 
 function HeaderSecction(){
     return(
-        <header className="flex items-center justify-between px-30 py-4">
-            <h1 className="text-2xl">Title de la pagina</h1>
-
+        <header className="flex items-center justify-between px-30 py-4 border">
+            <h1 className="text-2xl font-bold">Placer and Delirios</h1>
             <nav>
-                <Link to="/" className="mr-4">Inicio</Link>
-                <Link to="/users">Users</Link>
+                <Link to="/" className="navigateItem">Inicio</Link>
+                <Link to="/about" className="navigateItem">Nosotros</Link>
+                <Link to="/schedule" className="navigateItem">Horario</Link>
+                <Link to="/products" className="navigateItem">Productos</Link>
+                <Link to="/location" className="navigateItem">Ubicación</Link>
+                <Link to="/login" className="text-sm font-bold border py-2 px-4 rounded-[8px]">Iniciar Sesión</Link>
             </nav>
         </header>
     );

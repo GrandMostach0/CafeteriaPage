@@ -1,9 +1,19 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import HeaderSecction from "./HeaderSecction";
+import FooterSecction from "./FooterSecction";
 
 function Layout (){
     return(
-        <h1>Soy un Layout.jsx</h1>
+        <>
+            <HeaderSecction  />
+
+            <main>
+                <Outlet />
+            </main>
+
+            <FooterSecction />
+        </>
     )
 }
 
